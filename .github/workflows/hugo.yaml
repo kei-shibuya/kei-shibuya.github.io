@@ -97,6 +97,8 @@ jobs:
         with:
           path: ./public
   deploy:
+    # 追記：push（マージ）された時だけ実行し、PRの時はこのジョブ自体をスキップする
+    if: github.event_name == 'push'
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
