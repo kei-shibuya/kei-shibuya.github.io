@@ -4,6 +4,10 @@ title = 'My New Blog'
 theme = 'PaperMod'
 dateFormat = "2006-01-02"
 
+[caches]
+  [caches.images]
+    dir = ':cacheDir/images'
+
 [params]
     env = "production"
     title = "My New Blog"
