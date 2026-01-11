@@ -1,0 +1,34 @@
+{{- $scratch := newScratch }}
+
+{{- if not .Date.IsZero -}}
+{{- /* 日付を YYYY-MM-DD に書き換え */ -}}
+{{- $scratch.Add "meta" (slice (printf "<span>%s</span>" (.Date.Format "2006-01-02"))) }}
+{{- end }}
+
+{{- if (.Param "ShowReadingTime") -}}
+{{- $scratch.Add "meta" (slice (printf "<span>%s</span>" (i18n "read_time" .ReadingTime | default (printf "%d min" .ReadingTime)))) }}
+{{- end }}
+
+{{- if (.Param "ShowWordCount") -}}
+{{- $scratch.Add "meta" (slice (printf "<span>%s</span>" (i18n "words" .WordCount | default (printf "%d words" .WordCount)))) }}
+{{- end }}
+
+{{- if not (.Param "hideAuthor") -}}
+{{- with (partial "author.html" .) }}
+{{- $scratch.Add "meta" (slice (printf "<span>%s</span>" .)) }}
+{{- end }}
+{{- end }}
+
+{{- with ($scratch.Get "meta") }}
+{{- delimit . "&nbsp;·&nbsp;" | safeHTML -}}
+{{- end -}}
+
+{{- /* タグの表示とリンク遷移の追加 */ -}}
+{{- if .Params.tags -}}
+<span>
+    &nbsp;·&nbsp;
+    {{- range .Params.tags -}}
+    <a href="{{ "tags" | absURL }}/{{ . | urlize }}/" style="color: var(--secondary); text-decoration: none;">#{{ . }}</a>&nbsp;
+    {{- end -}}
+</span>
+{{- end -}}

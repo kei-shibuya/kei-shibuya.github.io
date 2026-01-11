@@ -1,0 +1,11 @@
+# Hugo の生成ファイル
+public/
+resources/
+.hugo_build.lock
+
+# OS・エディタの一時ファイル
+Thumbs.db
+.vscode/
+
+# 実行時のキャッシュ
+hugo_stats.json
