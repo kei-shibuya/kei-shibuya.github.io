@@ -10,7 +10,7 @@
 ## コマンドメモ
 
 - 記事の作成
-  - `hugo new posts/~~~/ファイル名.md`
+  - `hugo new posts/YYYYMMDD-title/index.md` 
 - ローカルでプレビュー
   - `hugo server -D`
 

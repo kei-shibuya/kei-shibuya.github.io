@@ -1,6 +1,6 @@
 baseURL = 'https://kei-shibuya.github.io/'
 languageCode = 'ja-jp'
-title = 'My New Blog'
+title = "Kei's Blog"
 theme = 'PaperMod'
 dateFormat = "2006-01-02"
 
@@ -25,7 +25,7 @@ dateFormat = "2006-01-02"
     # 1. 記事一覧の上に表示する自己紹介（Home Info）
     [params.homeInfoParams]
         Title = "Hi there, I'm Kei Shibuya 👋"
-        Content = "ここに簡単な自己紹介を書きます。データサイエンスやWeb技術について学んだことを記録しています。"
+        Content = "数学/技術/ビジネス/読書メモ/趣味など、とりとめもなく書く場所です。気ままに更新しています。自己紹介は「About Me」へ。"
     
     ShowPostNavLinks = true
     ShowCodeCopyButtons = true
@@ -44,3 +44,8 @@ dateFormat = "2006-01-02"
     name = "Tags"
     url = "/tags/"
     weight = 20
+
+[[menu.main]]
+    name = "About Me"
+    url = "/aboutme/"
+    weight = 10
