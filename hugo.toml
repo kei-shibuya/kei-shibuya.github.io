@@ -1,6 +1,6 @@
 baseURL = 'https://kei-shibuya.github.io/'
 languageCode = 'ja-jp'
-title = "Kei's Blog"
+title = "Times Kei Shibuya"
 theme = 'PaperMod'
 dateFormat = "2006-01-02"
 
