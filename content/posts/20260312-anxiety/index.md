@@ -1,7 +1,7 @@
 ---
 title: "不安をトリガーに動く"
 date: 2026-03-12T23:28:16+09:00
-tags: ["ビジネス", "思考の整理"]
+tags: ["仕事", "思考の整理"]
 math: false
 showToc: false
 TocOpen: false
